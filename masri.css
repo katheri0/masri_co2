@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* here header & logo moveing  */
+
+/* gnaral desniging  */
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* for movent of the logo  */
+
+
+.moveingColor {
+
+    background-image: linear-gradient(to right,
+            rgb(88, 115, 221), #050813, rgb(42, 61, 138), rgb(7, 15, 56), rgb(88, 115, 221));
+    color: transparent;
+    background-size: 400%;
+    background-position: -100%;
+    animation: animatedText 3s infinite alternate;
+}
+
+@keyframes animatedText {
+    to {
+        background-position: 100%;
+    }
+}
+
+/* for the header itself */
+
+header {
+    vertical-align: middle;
+    background-color: #aaf;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1px 150px;
+    box-shadow: 0 0 20px #000;
+    border-radius: 10px;
+    
+}
+
+.logo {
+
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+
+}
+
+header .fo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navigation a {
+    color: rgb(47, 47, 90);
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: 0.5s ease;
+    display: inline-block;
+
+}
+
+
+
+.navigation a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 5px #46658a;
+}
+
+.navigation a.active ::before {
+    transform: scale(1.2);
+    text-shadow: 0 0 5px #46658a;
+}
+
+
+
+.underline {
+    width: 100%;
+    height: 3px;
+    margin-top: -2px;
+     display: block; 
+} 
+
+
+.underline div {
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* background-color: rgb(47, 47, 90); */
+    border-radius: 30px;
+}
+
+section {
+    padding: 100px 150px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("img/1.jpeg") ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    background-image: linear-gradient(rgb(170, 170, 255), rgb(153, 167, 221), rgb(126, 147, 223), rgb(117, 138, 223));
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 4em;
+    font-weight: 500;
+
+
+
+}
+
+
+
+.main span {
+    background-image: linear-gradient(rgb(142, 155, 215), rgb(101, 110, 146), rgb(70, 90, 160), rgb(22, 57, 195));
+    color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+
+.main #hassen {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.main .ls {
+    padding-right: 30%;
+}
+.class 
+{
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+    background-color: rgb(155, 155, 236, 0.70);
+    border-radius: 50px;
+}
+
+.class h3
+{
+    display: flex;
+    justify-content: center;
+
+   
+}
+ul
+{
+    padding-left:20px ;
+}
+
+
+
+/* here page two respanseve cards */
+
+
+/* it make it easer to  desgin */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppoins', sans-serif;  
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: #36454F;
+
+}
+
+/* flex and dinamic proprties */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 50px;
+    padding: 152px 50px;
+}
+/* making the cards itself here */
+.container .card {
+    position: relative;  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: #aaf;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.25);
+}
+/* doing hover affact to change the height bigger to  400 and make the overflow (photo) hidden*/
+.container .card:hover {
+    height: 400px;
+}
+/* set the  box of the photos in  the cards   */
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+/* doing the hover to make the box of the photos go up and smaller and adding the shadow affact  */
+.container .card:hover .img-box {
+    top: -90px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+/* seting the actual photos */
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* seting the contant  of the cards making the  height small to make the contant desaper */
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+/* making the content go up with the photos(hover)   */
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+/*  set the color of the cards class relative to the class it self with var function  */
+.container .card .content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--ccc);
+}
+
+/* set the color of p */
+.container .card .content p {
+    color: #333;
+}
+/*set the colors of the links throw var and other setings  */
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--ccc);
+    color: white;
+    font-weight: 500;
+}
+/* setint the opacity of the a (links) its not transparty becouse a is aready hidden making the opacity the opposit of it  */
+.container .card .content a:hover {
+    opacity: 0.8;
+}
+
